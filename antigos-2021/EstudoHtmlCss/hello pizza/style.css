@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.pergunta {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.classificacao {
+    margin-top: 10px;
+}
+
+.estrela {
+    cursor: pointer;
+    color: gold;
+    font-size: 20px;
+    margin: 0 2px;
+}
+
+.estrela:hover {
+    color: orange;
+}

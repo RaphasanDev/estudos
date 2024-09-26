@@ -1,0 +1,4 @@
+br\ce\wcaquino\rest\tests\NaoAcessarSemToken.class
+br\ce\wcaquino\rest\core\BaseTest.class
+br\ce\wcaquino\rest\core\Constantes.class
+br\ce\wcaquino\rest\tests\Movimentacao.class

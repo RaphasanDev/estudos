@@ -1,0 +1,52 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>Forms With HTML 5</title>
+</head>
+
+<body>
+    <header>
+        <h1> Forms</h1>
+        <h2>Praticando Forms</h2>
+    </header>
+    <form oninput="total.value=(nights.valueAsNumber*99)">
+        <label>Full Name </label>
+        <input type="text" id="full_name" placeholder="Placeholder" required>
+        <label>Email:</label>
+        <input type="email" id="email" name="email" placeholder="digite seu e-mail aqui" required>
+        <label>Telephone</label>
+        <input type="tel" id="phone_number" name="Telephone" placeholder="Digite seu telefone" required>
+        <Label>Arrival Date</Label>
+        <input type="date" id="Arrival-date" name="arrival-date" placeholder="Informe a data de chegada" required>
+        <label>Número de noites</label>
+        <input type="number" id="nights" name="nights" value="1" min="1" max="10" required>
+        <label>Estimated Total</label>
+        <output id="total" name="total">99</output>.00
+        <label>Promo Code:</label>
+        <input type="text" id="promo" name="promo" pattern="[A-Za-z0-9{6}]"
+            title="Promo codes consist of 6 alphanumeric characters">
+        <input type="submit" value="Request Reservation">
+    </form>
+
+
+
+</body>
+
+</html>
