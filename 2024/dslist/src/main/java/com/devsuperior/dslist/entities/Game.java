@@ -20,26 +20,30 @@ public class Game {
 	@Column(name = "game_year")
 	private Integer year; // year é uma palavra reservada do SQL, por isso usar o @Column para customizar o nome da coluna no banco.
 	private String genre;
-	private String platform;
+	private String platforms;
+	private Double score;
 	private String imgUrl;
-	private String shorDescription;
-	private String longDescritption;
+	@Column(columnDefinition = "TEXT") // para o BD receber como texto e não como varChar, que vai só até 255 caracteres.
+	private String shortDescription;
+	@Column(columnDefinition = "TEXT") // para o BD receber como texto e não como varChar, que vai só até 255 caracteres.
+	private String longDescription;
 
 	public Game() {
 
 	}
 
-	public Game(Long id, String title, Integer year, String genre, String platform, String imgUrl,
-			String shorDescription, String longDescritption) {
+	public Game(Long id, String title, Integer year, String genre, String platforms, Double score, String imgUrl,
+			String shortDescription, String longDescription) {
 
 		this.id = id;
 		this.title = title;
 		this.year = year;
 		this.genre = genre;
-		this.platform = platform;
+		this.platforms = platforms;
+		this.score = score;
 		this.imgUrl = imgUrl;
-		this.shorDescription = shorDescription;
-		this.longDescritption = longDescritption;
+		this.shortDescription = shortDescription;
+		this.longDescription = longDescription;
 	}
 
 	@Override
@@ -91,12 +95,20 @@ public class Game {
 		this.genre = genre;
 	}
 
-	public String getPlatform() {
-		return platform;
+	public String getPlatforms() {
+		return platforms;
+	}
+	
+	public Double getScore() {
+		return score;
 	}
 
-	public void setPlatform(String platform) {
-		this.platform = platform;
+	public void setScore(Double score) {
+		this.score = score;
+	}
+
+	public void setPlatforms(String platform) {
+		this.platforms = platform;
 	}
 
 	public String getImgUrl() {
@@ -108,19 +120,19 @@ public class Game {
 	}
 
 	public String getShorDescription() {
-		return shorDescription;
+		return shortDescription;
 	}
 
 	public void setShorDescription(String shorDescription) {
-		this.shorDescription = shorDescription;
+		this.shortDescription = shorDescription;
 	}
 
 	public String getLongDescritption() {
-		return longDescritption;
+		return longDescription;
 	}
 
 	public void setLongDescritption(String longDescritption) {
-		this.longDescritption = longDescritption;
+		this.longDescription = longDescritption;
 	}
 
 }
